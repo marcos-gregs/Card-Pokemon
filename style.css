@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 6rem;
+    flex-direction: column;
+    background-image: url("img/oak.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+
+}
+
+input{
+    display: none;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    perspective: 900px;
+
+}
+.item{
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
+    width: 30%;
+    transition: 0.5s all ease;
+    transform: rotateX(45deg) scale(0.7);
+    box-shadow: 0px 20px 50px rgb(211,209,209)
+}
+.carta1,.carta2,.carta3{
+    width: 405px;
+    height: 592px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    border-radius: 15px;
+    background-image: url("img/pokemon.jpg");
+}
+
+.item:hover{
+    cursor: pointer;
+    transform: rotate(0deg) scale(1);
+    transition: .5s, all ease;
+    z-index: 400;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.16);
+}
+#chari:checked~.logo>.carta1{
+    transform: rotateY(180deg) scaleX(-1)
+    ;
+    background-image: url('img/chari.jpg');
+}
+#blas:checked~.logo>.carta2{
+    transform: rotateY(180deg) scaleX(-1)
+    ;
+    background-image: url('img/blas.png');
+}
+#venu:checked~.logo>.carta3{
+    transform: rotateY(180deg) scaleX(-1)
+    ;
+    background-image: url('img/venu.jpg');
+}
+
+label {
+    display: flex;
+    width: 405px;
+    height: 500px;
+    border-radius: 5px;
+}
